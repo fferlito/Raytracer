@@ -36,10 +36,8 @@ The project is organized as follows:
 
 Compiling the Raytracer
 ---------------------------
-To compile the app in Android Studio, it's necessary to compile CLIPS first (it should be already compiled anyway). 
-Follow the following steps to compile the CLIPS module, written in C:
+To compile the code in Linux, follow this instructions:
 
-*Compiling CLIPS from Android Studio*
  1. "*cd*" to the build directory
  2. use the command: "*cmake* .." 
  3. if step 3 is successful, compile the code using make -j# (where # is the number of cores in the CPU)
