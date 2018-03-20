@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <string.h>
 
 
 enum colors {RED_GUANINE, 
@@ -75,26 +76,26 @@ void  getRandomColorBase(float *baseColor, float *baseColor2){
 
 
 int main(int arcg, char *argv[]){
+  
+  //----------------------------------------------//
+  // Insert start and end limits i.e. horizontal spiral = (left border, right border) 
   int upLimit;
-  int downLimit;
+  scanf("%d", &upLimit);
+  
+  // horizontal spiral origin, from left side to right: (0, height/2, 100)
   int xPos;
   int yPos;
   int zPos;
-  
- // Insert start and end limits i.e. horizontal spiral = (left border, right border) 
-  scanf("%d %d", &downLimit, &upLimit);
-  
-  // horizontal spiral origin, from left side to right: (0, height/2, 100)
   scanf("%d %d %d", &xPos, &yPos, &zPos);
   
   
-  
-  // DEFINE SPIRAL VARIABLES
-  int R = 60;           // radius of DNA in Angstrom
-  int spacingAtoms = 22;    // space sampling between bases: 34 Angstrom
-  int radiusSphere = 10;
-  int radiusCylinder = 2;
-  double colorBackground[3] = {0.4,0.3,0.5}
+  //-----------------------------------------------//
+  // DEFINE VARIABLES OF DNA SPIRAL
+  int R = 60;                             // radius of DNA
+  int spacingAtoms = 20;                  // space sampling between bases: (34 Angstrom)
+  int radiusSphere = 10;                  // radaius of atoms in double helix
+  int radiusCylinder = 1;                 // radius of the cylinders (the 4 bases)
+  double colorBackground[3] = {0.243, 0, 0.356};
   
   // DEFINE SCENE LIGHTS AND SPECIFICS
   printf("{\n");
@@ -112,9 +113,10 @@ int main(int arcg, char *argv[]){
 
     
     // GENERATE SPIRAL OBJECTS (1 red ball and 1 blue ball per iteration)
-  for(float t = downLimit; t < upLimit; t = t + 0.25){
+  int x;
+  for(float t = 0; x < upLimit; t = t + 0.25){
     
-    int x = t*spacingAtoms + xPos;
+    x = t*spacingAtoms + xPos;
     int z = R * cos(t) + zPos;
     int y = R * sin(t) + yPos;
     

@@ -73,7 +73,7 @@ Color Scene::trace(Ray const &ray)
     // Toon shading computation: make steep change in diffuse color
     N = N.normalized();
     float VdotN = V.dot(N);
-    if(VdotN < 0.3 && hasToonShadingOn) return Vector(0,0,0);
+    if(VdotN < 0.2 && (hasToonShadingOn || hasGooshShadingOn)) return Vector(0.1,0.1,0.1);
     
     
     // Compute Full Phong Lightinig Model
@@ -87,7 +87,7 @@ Color Scene::trace(Ray const &ray)
     for (unsigned i = 0; i < getNumLights(); i++) {
 		
 		Vector L = (lights[i]->position - hit).normalized();      // direction of light
-		if (hasShadow) {
+		if (hasShadow && !hasGooshShadingOn) {
 			if (reflectRayIntersection(Ray(hit, L))) {
 				// Skip this light for color calculation as the ray intersects another object
 				continue;
@@ -107,16 +107,20 @@ Color Scene::trace(Ray const &ray)
           else LdotN = toonD;
         } 
         
-		Vector diffuse =  fmax(0, LdotN) * materialColor * lights[i]->color * material.kd;
+        Vector diffuse =  fmax(0, LdotN) * materialColor * lights[i]->color * material.kd;
+       
+        if(hasGooshShadingOn){
+           diffuse =  k_cold *  (1 - LdotN) / 2 + k_warm * (1 + LdotN) / 2  ;
+       }
+        
+ 		
 		
 
         // Toon shading computation: make specular component less smooth
         float RdotV = R.dot(V.normalized());
         if(hasToonShadingOn){
-        if (RdotV < 0.95) 
-          RdotV = 0.0;
-        else 
-          RdotV = 1.0;
+          if (RdotV < 0.90)     RdotV = 0.0;
+          else                  RdotV = 1.0;
         } 
         
 		Vector specular = pow(fmax(0,RdotV), material.n) * lights[i]->color * material.ks;
@@ -219,6 +223,7 @@ Color Scene::reflectRayRecursive(Ray const&ray, unsigned reflectCount) {
 		}
 	    Vector R = (2 * N.dot(L) * N - L).normalized();           // direction of (ideal) reflection towards light
 	    
+        
 		Vector diffuse =  fmax(0, N.dot(L)) * materialColor * lights[i]->color * material.kd;
 		
 		Vector specular = pow(fmax(0,R.dot(V.normalized())), material.n) * lights[i]->color * material.ks;
@@ -318,6 +323,16 @@ void Scene::setToonShading(bool const &toon)
 {
   hasToonShadingOn = toon;
 }
+
+void Scene::setGooshShading(float const &b, float const &y, float const &alpha, float const &beta){
+  if(b == 0 && y == 0 && alpha == 0 && beta == 0) hasGooshShadingOn = false;
+  else {
+     hasGooshShadingOn = true;
+     k_warm = Vector(1, 0.8, 0) * alpha;
+     k_cold = Vector(0,0,1) * beta;
+  }
+}
+
 
 
 unsigned Scene::getNumObject()

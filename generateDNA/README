@@ -1,7 +1,8 @@
 README FILE
 
-spiral.c: code to generate a json file with a scene with a double spiral made of spheres 
-(one spiral is red, the other one is blue)
+spiral.c: code to generate a json file with a scene with an horizontal double spiral made of spheres 
+(one spiral is red, the other one is blue, cylinders in the middle have 4 random colors, depending
+  on which DNA base is that)
 
 ##### Compile ##### 
 Compile using the math library (-lm)
@@ -11,9 +12,9 @@ gcc -Wall createSpiralScene.c -lm
 Run with ./a.out > (output_file.json)
 i.e.      ./a.out > myscene01.json
 
--origin and end of spiral in the xyz plane [x1, x2]
+-lenght of the spiral [lenght]
 -position of the base [x, y, z]
 
-i.e.       to draw an orizontal double spiral:
-0 400   (from left to right side of picture)
+i.e.       to draw an orizontal double spiral, from left to right, in a 400x400 image:
+400   (lenght from left to right side of picture)
 0 200 100 (initial postion of spiral, on the left of the picture)

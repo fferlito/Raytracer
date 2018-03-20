@@ -16,8 +16,11 @@ class Scene
     std::vector<ObjectPtr> objects;
     std::vector<LightPtr> lights;   // no ptr needed, but kept for consistency
     Point eye;
+    Color k_warm;
+    Color k_cold;
 	bool hasShadow;
     bool hasToonShadingOn;
+    bool hasGooshShadingOn;
     unsigned superSamplingFactor;
 	unsigned maxReflectionDepth;
 	
@@ -36,6 +39,7 @@ class Scene
         void setEye(Triple const &position);
         void setHasShadow(bool const &shadow);
         void setToonShading(bool const &toon);
+        void setGooshShading(float const &b, float const &y, float const &alpha, float const &beta);
         void setReflectionDepth(unsigned const &maxDepth);
         void setSuperSamplingFactor(unsigned const &factor);
         unsigned getNumObject();

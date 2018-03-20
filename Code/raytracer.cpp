@@ -184,7 +184,7 @@ try
 		std::cout << "Shadow: false (not defined)" << "\n";
 	    scene.setHasShadow(false);
 	}
-	   // Check if there is a shadow variable
+	   // Check if there is a toon variable
     if (jsonscene["Toon"] == false || jsonscene["Toon"] == true) {
 		scene.setToonShading(jsonscene["Toon"]);
 		std::cout << "Toon shading:" << jsonscene["Shadows"] << "\n";
@@ -192,6 +192,18 @@ try
 	else {
 		std::cout << "Toon shading: false (not defined)" << "\n";
 	    scene.setToonShading(false);
+	}
+    // Check if there are goosh variables
+    if (jsonscene["b"] >0 && jsonscene["y"] > 0 && jsonscene["alpha"] > 0 && jsonscene["beta"] > 0 ) {
+		scene.setGooshShading(jsonscene["b"], jsonscene["y"], jsonscene["alpha"], jsonscene["beta"]);
+		std::cout << "Goosh shading is on, with parameters:\n";
+        std::cout << "  b        = " << jsonscene["b"] << "\n";
+        std::cout << "  y        = " << jsonscene["y"] << "\n";
+        std::cout << "  alpha    = " << jsonscene["alpha"] << "\n";
+        std::cout << "  beta     = " << jsonscene["beta"] << "\n";
+	} else {
+		std::cout << "Goosh shading: false (not defined)" << "\n";
+	    scene.setGooshShading(0,0,0,0);
 	}
 	// Check for a recursion depth variable
 	if (jsonscene["MaxRecursionDepth"] >= 0) {
