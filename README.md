@@ -1,7 +1,7 @@
-Raytracer 
-==============
+Raytracer and DNA double helix scene generator
+==============================================
 
-![frist](/Scenes/dna/dna2.png)  
+![frist](/Scenes/dna/dnaHD.png)  
 
 This *Raytracer* program is made for the course *Computer Graphics* at the Univesity of Groningen. It currently supports:
 + Full Phong Lighting Model 
@@ -51,9 +51,11 @@ To compile the code in Linux, follow this instructions:
 
 Screenshots
 ---------------------------
-![frist](/Scenes/dna/dna1.png) 
-![frist](/Scenes/dna/dna2.png) 
-![frist](/Scenes/dna/dna3.png) 
+DNA with Phong lighting and reflections
+![frist](/Scenes/dna/dnaRef.png) 
 
-![frist](/Screenshots/toon.png) 
-![frist](/Screenshots/cyl.png) 
+DNA with Gooch lighting model
+![frist](/Scenes/dna/dnaGooch.png) 
+
+DNA with cell shading model
+![frist](/Scenes/dna/dnaToon1.png) 
