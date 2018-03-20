@@ -17,6 +17,7 @@ The objects supported are:
 + quad
 + plane
 + cylinder (with caps)
++ triangle meshes 
 
 
 The project is organized as follows:
@@ -30,6 +31,9 @@ The project is organized as follows:
 
 *Screenshots*:
   A folder with some pictures of the raytracer in action. 
+
+*Models*:
+  contains various meshed saved as *.obj* files. Shapes are defined with triangular patches. 
 
 *GenerateDNA*:
   Contains the code written in C used to generate the JSON file of the DNA double helix shown above. Read the related *README* file to get insights.
