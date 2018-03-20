@@ -37,7 +37,10 @@ The project is organized as follows:
   contains various meshed saved as *.obj* files. Shapes are defined with triangular patches. 
 
 *GenerateDNA*:
-  Contains the code written in C used to generate the JSON file of the DNA double helix shown above. Read the related *README* file to get insights.
+  Contains the code written in C used to generate the JSON file of the DNA double helix shown above. Read the related *README* file to see how to run it.
+  
+*GenerateMolecule*:
+  Contains the code written in C used to generate the JSON file of a single molecule of H2O. There the is also a code to generate only the objects to add to an already existing scene. Read the related *README* file to run the codes.
 
 Compiling the Raytracer
 ---------------------------
@@ -58,4 +61,4 @@ DNA with Gooch lighting model
 ![frist](/Scenes/dna/dnaGooch.png) 
 
 DNA with cell shading model
-![frist](/Scenes/dna/dnaToon1.png) 
+![frist](/Scenes/dna/dnaToon.png) 
