@@ -1,9 +1,7 @@
 Raytracer 
 ==============
 
-Inline-style: 
-![alt text](Raytracer/Screenshots/toon.png "Toon shader")
-
+![frist](/Screenshots/toon.png)  
 
 This *Raytracer* program is made for the course *Computer Graphics* at the Univesity of Groningen. It currently supports the Full Phong Lighting Model, shadows, reflections, textures, super sampling and a Cel-shader (a.k.a. Toon-shader). The objects supported are:
 + sphere
@@ -15,13 +13,13 @@ This *Raytracer* program is made for the course *Computer Graphics* at the Unive
 
 The project is organized as follows:
 
-Code
+*Code*
   Contains the code used in the program itself: the code creates a PNG file with the chosen scene. 
   
-Scenes
+*Scenes*
   Folder containing the JSON files with the scenes' description.  
 
-Screenshots
+*Screenshots*
   A folder with some pictures of the raytracer in action. 
 
 
