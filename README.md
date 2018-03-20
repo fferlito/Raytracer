@@ -9,7 +9,8 @@ This *Raytracer* program is made for the course *Computer Graphics* at the Unive
 + reflections 
 + textures 
 + super sampling 
-+ Cel-shader (a.k.a. Toon-shader). 
++ Cel-shader (a.k.a. Toon-shader)
++ Gooch shader
 
 The objects supported are:
 + sphere
@@ -50,6 +51,9 @@ To compile the code in Linux, follow this instructions:
 
 Screenshots
 ---------------------------
-![frist](/Scenes/dna/dna7.png) 
+![frist](/Scenes/dna/dna1.png) 
+![frist](/Scenes/dna/dna2.png) 
+![frist](/Scenes/dna/dna3.png) 
+
 ![frist](/Screenshots/toon.png) 
 ![frist](/Screenshots/cyl.png) 
