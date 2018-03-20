@@ -58,7 +58,7 @@ DNA with Gooch lighting model
 ![frist](/Scenes/dna/dnaGooch.png) 
 
 DNA with cell shading model
-![frist](/Scenes/dna/dnaToon.png) 
+![frist](/Scenes/dna/dnaToon1.png) 
 
 ![frist](/Screenshots/toon.png) 
 ![frist](/Screenshots/cyl.png) 
