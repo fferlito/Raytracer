@@ -1,13 +1,33 @@
-We implemented the intersection function of the sphere where we calculate the intersection and the normal. Furthermore in scene.cpp we modified the trace function to implement phong diffuse ambient and specular shading. 
+Raytracer 
+==============
 
-We added support for the triangle, plane and quad shape in raytracing.cpp and corresponding classes for these with their own intersection and normal calculations. 
-We added an extra scene (scene03.json) that shows these new shapes.
+This *Raytracer* program is made for the course *Computer Graphics* at the Univesity of Groningen. It currently supports the Full Phong Lighting Model, shadows, reflections, textures, super sampling and a Cel-shader (a.k.a. Toon-shader). The objects supported are:
++ sphere
++ triangle
++ quad
++ plane
++ cylinder (with caps)
 
-Lastly we also added support for mesh loading, where everything is defined in terms of triangles (the coordinates for this need to be positive or moved to be positive programmaticaly).
-We added a scene (scene04.json that shows the mesh.
 
-To run the program you first need to cd to the build directory and use the command: cmake .. 
+The project is organized as follows:
 
-If this is succesful you compile it using make and then to run it you use ./ray <path to .json file> [output .png file].
+Code
+  Contains the code used in the program itself: the code creates a PNG file with the chosen scene. 
+  
+Scenes
+  Folder containing the JSON files with the scenes' description.  
 
-In the build directory this would be ./ray ../Scenes/scene01.json for example. 
+Screenshots
+  A folder with some pictures of the raytracer in action. 
+
+
+Compiling the Raytracer
+---------------------------
+To compile the app in Android Studio, it's necessary to compile CLIPS first (it should be already compiled anyway). 
+Follow the following steps to compile the CLIPS module, written in C:
+
+*Compiling CLIPS from Android Studio*
+ 1. "*cd*" to the build directory
+ 2. use the command: "*cmake* .." 
+ 3. if step 3 is successful, compile the code using make -j# (where # is the number of cores in the CPU)
+ 4. to run it, you use "./ray <path to .json file> [output.png]".
