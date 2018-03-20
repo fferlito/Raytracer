@@ -1,0 +1,18 @@
+README FILE
+
+This script creates a scene, or only objects to add to another scene, for the raytracer containing one molecule of H2O.
+
+The input is the xyz position of the central atom sphere (Oxygen).
+The code will generate the two other atom spheres and their cylindric bounds using random vectors 
+
+
+
+##### Input: ######
+Run with ./a.out > (output_file.json)
+i.e.      ./a.out > myscene01.json
+
+-lenght of the spiral [lenght]
+-position of the base [x, y, z]
+
+i.e.       to draw an orizontal double spiral, from left to right, in a 400x400 image:
+0 200 100 (position of central atom)
