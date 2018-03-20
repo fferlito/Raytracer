@@ -1,0 +1,72 @@
+{
+    "Eye": [200, 200, 1000],
+    "Lights": [
+        {
+            "position": [-200, 600, 1500],
+            "color": [1.0, 1.0, 1.0]
+        }
+    ],
+    "Objects": [
+        {
+            "type": "plane",
+            "comment": "Plane",
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": -7,
+            "material":
+            {
+                "color": [0.0, 1.0, 0.0],
+                "ka": 0.2,
+                "kd": 0.3,
+                "ks": 0.8,
+                "n": 8
+            }
+        },
+        {
+            "type": "quad",
+            "comment": "Quadraliteral",
+            "vertex0": [250, 200, 0],
+            "vertex1": [300, 150, 0],
+            "vertex2": [350, 200, 0],
+            "vertex3": [300, 250, 0],
+            "material":
+            {
+                "color": [1.0, 0.5, 0.5],
+                "ka": 0.1,
+                "kd": 0.4,
+                "ks": 0.5,
+                "n": 32
+            }
+        },
+        {
+            "type": "triangle",
+            "comment": "Red triangle",
+            "vertex0": [224, 220, 30],
+            "vertex1": [390, 25, 70],
+            "vertex2": [224, 26, 100],
+            "material":
+            {
+                "color": [1.0, 0.0, 0.0],
+                "ka": 0.1,
+                "kd": 0.4,
+                "ks": 0.5,
+                "n": 32
+            }
+        },
+        {
+            "type": "sphere",
+            "comment": "Orange sphere",
+            "position": [110, 130, 200],
+            "radius": 50,
+            "material":
+            {
+                "color": [1.0, 0.5, 0.0],
+                "ka": 0.2,
+                "kd": 0.8,
+                "ks": 0.5,
+                "n": 32
+            }
+        }
+    ]
+}

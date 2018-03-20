@@ -1,0 +1,42 @@
+{
+    "Eye": [200, 200, 1000],
+    "Shadows": true,
+    "Lights": [
+        {
+            "position": [-200, 600, 1500],
+            "color": [1.0, 1.0, 1.0]
+        }
+    ],
+    "Objects": [
+        {
+            "type": "cylinder",
+            "comment": "Blue cylinder",
+            "origin": [200, 100, 200],
+            "axis": [0, 200, 0],
+            "radius": 35,
+            "height": 200,
+            "material":
+            {
+                "color": [0.0, 0.0, 1.0],
+                "ka": 0.5,
+                "kd": 0.7,
+                "ks": 1.0,
+                "n": 64
+            }
+        },
+        {
+            "type": "sphere",
+            "comment": "Grey sphere1",
+            "position": [800, 400, -4000],
+            "radius": 4000,
+            "material":
+            {
+                "color": [0.4, 0.4, 0.4],
+                "ka": 0.2,
+                "kd": 0.8,
+                "ks": 0,
+                "n": 1
+            }
+        }
+    ]
+}
