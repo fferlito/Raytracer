@@ -1,0 +1,19 @@
+README FILE
+
+spiral.c: code to generate a json file with a scene with a double spiral made of spheres 
+(one spiral is red, the other one is blue)
+
+##### Compile ##### 
+Compile using the math library (-lm)
+gcc -Wall createSpiralScene.c -lm
+
+##### Input: ######
+Run with ./a.out > (output_file.json)
+i.e.      ./a.out > myscene01.json
+
+-origin and end of spiral in the xyz plane [x1, x2]
+-position of the base [x, y, z]
+
+i.e.       to draw an orizontal double spiral:
+0 400   (from left to right side of picture)
+0 200 100 (initial postion of spiral, on the left of the picture)
