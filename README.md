@@ -54,11 +54,14 @@ To compile the code in Linux, follow this instructions:
 
 Screenshots
 ---------------------------
-DNA with Phong lighting and reflections
+DNA with full Phong lighting model and reflections (800x400)
 ![frist](/Scenes/dna/dnaRef.png) 
 
-DNA with Gooch lighting model
+DNA with Gooch lighting model (800x400)
 ![frist](/Scenes/dna/dnaGooch.png) 
 
-DNA with cell shading model
-![frist](/Scenes/dna/dnaToon.png) 
+DNA with cell shading model (800x400)
+![frist](/Scenes/dna/dnaToon.png)
+
+(All the DNA screenshots can be found in Scenes/dna)
+
